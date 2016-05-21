@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // @font-face {
 //     font-family: 'Great Vibes';
 //     src: url('/assets/fonts/greatvibes-regular.eot');
@@ -21,18 +22,59 @@
          url('/assets/fonts/Fira-master/woff2/FiraSans-Light.woff2') format('woff2'),
          url('/assets/fonts/Fira-master/woff/FiraSans-Light.woff') format('woff'),
          url('/assets/fonts/Fira-master/ttf/FiraSans-Light.ttf') format('truetype');
+=======
+// @font-face{
+//     font-family: 'Fira Sans';
+//     src: url('/assets/fonts/Fira-master/eot/FiraSans-Light.eot');
+//     src: local('Fira Sans Light'),
+//          url('/assets/fonts/Fira-master/eot/FiraSans-Light.eot') format('embedded-opentype'),
+//          url('/assets/fonts/Fira-master/woff2/FiraSans-Light.woff2') format('woff2'),
+//          url('/assets/fonts/Fira-master/woff/FiraSans-Light.woff') format('woff'),
+//          url('/assets/fonts/Fira-master/ttf/FiraSans-Light.ttf') format('truetype');
+//     font-weight: 300;
+//     font-style: normal;
+// }
+//
+// @font-face{
+//     font-family: 'Fira Sans';
+//     src: url('/assets/fonts/Fira-master/eot/FiraSans-Regular.eot');
+//     src: local('Fira Sans Regular'),
+//          url('/assets/fonts/Fira-master/eot/FiraSans-Regular.eot') format('embedded-opentype'),
+//          url('/assets/fonts/Fira-master/woff2/FiraSans-Regular.woff2') format('woff2'),
+//          url('/assets/fonts/Fira-master/woff/FiraSans-Regular.woff') format('woff'),
+//          url('/assets/fonts/Fira-master/ttf/FiraSans-Regular.ttf') format('truetype');
+//     font-weight: 400;
+//     font-style: normal;
+// }
+
+@font-face{
+    font-family: 'Fira Sans';
+    src: url('../fonts/FiraSans-Light.eot');
+    src: url('../fonts/FiraSans-Light.eot') format('embedded-opentype'),
+         url('../fonts/FiraSans-Light.woff2') format('woff2'),
+         url('../fonts/FiraSans-Light.woff') format('woff'),
+         url('../fonts/FiraSans-Light.ttf') format('truetype');
+>>>>>>> 4738e368126629203f4b6cf533951841ce9a8ab9
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face{
     font-family: 'Fira Sans';
+<<<<<<< HEAD
     src: url('/assets/fonts/Fira-master/eot/FiraSans-Regular.eot');
     src: local('Fira Sans Regular'),
          url('/assets/fonts/Fira-master/eot/FiraSans-Regular.eot') format('embedded-opentype'),
          url('/assets/fonts/Fira-master/woff2/FiraSans-Regular.woff2') format('woff2'),
          url('/assets/fonts/Fira-master/woff/FiraSans-Regular.woff') format('woff'),
          url('/assets/fonts/Fira-master/ttf/FiraSans-Regular.ttf') format('truetype');
+=======
+    src: url('../fonts/FiraSans-Regular.eot');
+    src: url('../fonts/FiraSans-Regular.eot') format('embedded-opentype'),
+         url('../fonts/FiraSans-Regular.woff2') format('woff2'),
+         url('../fonts/FiraSans-Regular.woff') format('woff'),
+         url('../fonts/FiraSans-Regular.ttf') format('truetype');
+>>>>>>> 4738e368126629203f4b6cf533951841ce9a8ab9
     font-weight: 400;
     font-style: normal;
 }
