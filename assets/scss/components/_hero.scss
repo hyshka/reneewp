@@ -1,0 +1,142 @@
+.inner-hero {
+  padding: 1rem 0 1rem 0;
+
+  @include breakpoint(medium) {
+    padding: 2rem 0 1rem 0;
+  }
+  @include breakpoint(large) {
+    padding: 2rem 0rem 1rem 0rem;
+  }
+}
+
+.home .hero {
+
+  .thumbnail {
+    margin-top: .5rem;
+    @include breakpoint(medium) {
+      margin-top: 0;
+    }
+  }
+
+  @include breakpoint(large) {
+    position: relative;
+    background-image:
+        linear-gradient(
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0)
+        ),
+      url('../images/index_hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .inner-hero {
+      position: relative;
+      z-index: 1;
+      color: $white;
+      background-color: rgba(0,0,0,.5);
+
+      @include breakpoint(large) {
+        font-size: 80%;
+        max-width: 28rem !important;
+      }
+    }
+  }
+
+  @include breakpoint(xlarge) {
+    height: 25rem;
+  }
+  @include breakpoint(xxlarge) {
+    height: 30rem;
+  }
+}
+
+.page-template-template-coaching #breakthrough {
+  border-bottom: 1px solid $medium-gray;
+
+  @include breakpoint(large) {
+    position: relative;
+    background-image:
+      // linear-gradient(
+      //   rgba(255, 255, 255, 0.75),
+      //   rgba(255, 255, 255, 0.75)
+      // ),
+      url('../images/bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 -170.6px;
+
+    .inner-hero {
+      background-color: rgba(255,255,255,.25);
+    }
+  }
+}
+
+.hero {
+  margin: 0;
+
+  .inner-hero {
+
+    small {
+      vertical-align: top;
+      margin-top: .75rem;
+      display: inline-block;
+
+      @include breakpoint(medium) {
+        margin-top: .5rem;
+      }
+    }
+  }
+
+  h1, h2 {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    margin: 0;
+
+    span {
+      font-size: 50%;
+      margin-left: .125rem;
+      top: -.25rem;
+      position: relative;
+
+      @include breakpoint(medium) {
+        top: -.75rem;
+      }
+    }
+  }
+
+  .button {
+    margin-right: .5rem;
+  }
+}
+
+.hero.callout {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+
+  border: 0 !important;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+
+  position: relative;
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.25),
+      rgba(255, 255, 255, 0.25)
+    ),
+    url('../images/bg1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  h2 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+
+    span {
+      top: -.5rem !important;
+    }
+  }
+
+  @include breakpoint(large) {
+    padding: 2rem 0rem 1rem;
+  }
+}

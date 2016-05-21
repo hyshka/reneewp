@@ -1,0 +1,286 @@
+/************************************************
+
+Stylesheet: Main Stylesheet
+
+*************************************************/
+
+/*********************
+GENERAL STYLES
+*********************/
+
+html {
+  @include breakpoint(medium) {
+    font-size: 125% !important;
+  }
+  @include breakpoint(large) {
+    font-size: 150% !important;
+  }
+}
+
+.hero .column,
+.page-header .column,
+.narrow {
+  max-width: 33rem;
+}
+
+.narrow {
+  padding: 2rem 0 1rem;
+}
+
+/*********************
+LINK STYLES
+*********************/
+a, a:visited {
+
+	// Mobile tap color
+	&:link {
+		//Highlight links on iOS, Similar to :hover for mobile devices.
+		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+	}
+}
+
+/*********************
+HEADER STYLES
+*********************/
+
+#optinModal {
+  p {
+    padding-right: 2rem;
+  }
+}
+
+.reveal h4 {
+  font-size: 150%;
+}
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+
+.page-header {
+  background-color: scale-color($white, $lightness: -3%);
+  border-bottom: 1px dotted $medium-gray;
+  text-shadow: 1px 1px  #fff;
+}
+
+.page-title,
+.archive-title {
+  margin-top: 1rem;
+  margin-bottom: .75rem !important;
+}
+
+// Entry content
+.entry-content {
+
+	h1, h2, h3, h4, h5, h6 {
+    margin-top: 2rem;
+    font-weight: 400;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    @include breakpoint(medium) {
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+
+      &:first-child {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+	.lead {
+      border-left: 3px solid $primary-color;
+      padding: .5rem 1.5rem;
+  }
+
+	ul, ol {
+
+    @include breakpoint(medium) {
+      margin-left: 2rem;
+    }
+
+    li {
+      margin-bottom: .5rem;
+
+      @include breakpoint(medium) {
+        margin-bottom: 1rem;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  ol {
+    li {
+      list-style-type: none;
+      counter-increment: list;
+      position: relative;
+
+      &:after {
+        content: counter(list) ".";
+        position: absolute;
+        left: -2.5em;
+        width: 2em;
+        text-align: right;
+        color: $primary-color;
+      }
+    }
+  }
+
+  ul {
+
+    li {
+      list-style-type: none;
+      position: relative;
+
+      &:before {
+        content: "•";
+        position: absolute;
+        font-size: 2.5rem;
+        line-height: .57;
+        left: -1rem;
+        color: $primary-color;
+      }
+    }
+  }
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	img[class*="wp-image-"] {
+    @include thumbnail;
+  }
+
+	@include breakpoint(medium) {
+		.alignleft, img.alignleft {
+			margin-right: 1.5em;
+			display: inline;
+			float: left;
+		}
+		.alignright, img.alignright {
+			margin-left: 1.5em;
+			display: inline;
+			float: right;
+		}
+		.aligncenter, img.aligncenter {
+			margin-right: auto;
+			margin-left: auto;
+			display: block;
+			clear: both;
+		}
+	}
+
+	video, object {
+		max-width: 100%;
+		height: auto;
+	}
+
+	blockquote {
+    position: relative;
+
+    p {
+      margin: 0;
+    }
+
+    &:before {
+      content: "“";
+      color: $primary-color;
+      font-size: 150%;
+      font-weight: 400;
+      line-height: 0;
+      position: absolute;
+      top: 1.5rem;
+      left: .75rem;
+    }
+
+    cite {
+      margin-top: .25rem;
+      font-style: normal;
+      font-weight: 400;
+
+    }
+  }
+
+}
+
+.wp-caption {
+	max-width: 100%;
+	background: #eee;
+	padding: 5px;
+
+	// Images inside wp-caption
+	img {
+		max-width: 100%;
+		margin-bottom: 0;
+		width: 100%;
+	}
+
+	p.wp-caption-text {
+		font-size: 0.85em;
+		margin: 4px 0 7px;
+		text-align: center;
+	}
+}
+
+// Add Foundation styling to password protect button
+.post-password-form input[type="submit"] {
+	@include button;
+}
+
+/*********************
+IMAGE GALLERY STYLES
+*********************/
+	.gallery {
+
+		dl {
+
+			a {}
+
+			img {}
+
+		}
+
+		dt {}
+
+		dd {}
+
+}
+
+// Gallery caption styles
+.gallery-caption {}
+.size-full {}
+.size-large {}
+.size-medium {}
+.size-thumbnail {}
+
+/*********************
+FOOTER STYLES
+*********************/
+.footer {
+	clear: both;
+  padding-top: 1rem;
+  background-color: scale-color($white, $lightness: -3%);
+  border-top: 1px dotted $medium-gray;
+  text-shadow: 1px 1px  #fff;
+}
+
+.copyright {
+  font-size: 80%;
+  letter-spacing: 0.05em;
+}
+
+/*********************
+FOUNDATION STYLES
+*********************/
+.button.hollow.secondary:hover,
+.button.hollow.secondary:focus {
+    border-color: $secondary-color !important;
+    color: $secondary-color !important;
+    background-color: rgba($white, 0.125);
+}
