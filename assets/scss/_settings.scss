@@ -36,6 +36,8 @@
 // 1. Global
 // ---------
 
+$global-flexbox: false;
+$print-transparent-backgrounds: true;
 $global-font-size: 100%;
 // $global-width: rem-calc(830);
 $global-width: rem-calc(1200);
@@ -43,11 +45,13 @@ $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 // CC397B - fuschia
 // 2199e8 - original
-$primary-color: #CC397B;
-$secondary-color: #fefefe;
-$success-color: #3adb76;
-$warning-color: #ffae00;
-$alert-color: #ec5840;
+$foundation-palette: (
+  primary: #CC397B,
+  secondary: #fefefe,
+  success: #3adb76,
+  warning: #ffae00,
+  alert: #ec5840,
+);
 $light-gray: #e8e8e8;
 $medium-gray: #b8b8b8;
 $dark-gray: #585858;
@@ -63,6 +67,8 @@ $global-weight-normal: 300;
 $global-weight-bold: 400;
 $global-radius: 0;
 $global-text-direction: ltr;
+
+@include add-foundation-colors;
 
 // 2. Breakpoints
 // --------------
@@ -81,7 +87,7 @@ $breakpoint-classes: (small medium large);
 
 $grid-row-width: $global-width;
 $grid-column-count: 12;
-$grid-column-responsive-gutter: (
+$grid-column-gutter: (
   small: 24px,
   medium: 32px,
   large: 48px,
@@ -105,14 +111,6 @@ $header-sizes: (
     'h5': 17,
     'h6': 16,
   ),
-  // medium: (
-  //   'h1': 48,
-  //   'h2': 40,
-  //   'h3': 31,
-  //   'h4': 25,
-  //   'h5': 20,
-  //   'h6': 16,
-  // ),
   medium: (
     'h1': 30,
     'h2': 24,
@@ -271,6 +269,7 @@ $input-cursor-disabled: default;
 $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 $input-number-spinners: true;
 $input-radius: $global-radius;
+$input-placeholder-color: $medium-gray;
 
 // 21. Media Object
 // ----------------
@@ -286,7 +285,8 @@ $menu-margin: 0;
 $menu-margin-nested: 1rem;
 $menu-item-padding: 0.7rem 1rem;
 $menu-icon-spacing: 0.25rem;
-$menu-expand-max: 6;
+$menu-item-color-active: inherit;
+$menu-item-background-active: inherit;
 
 // 25. Pagination
 // --------------
@@ -362,4 +362,6 @@ $titlebar-icon-spacing: 0.25rem;
 $topbar-padding: 0.5rem 0;
 $topbar-background: transparent;
 $topbar-input-width: 200px;
-$topbar-title-spacing: 1rem
+$topbar-title-spacing: 1rem;
+$topbar-submenu-background: $topbar-background;
+$topbar-unstack-breakpoint: large;
