@@ -15,6 +15,9 @@ require_once(get_template_directory().'/assets/functions/menu-walkers.php');
 // Replace 'older/newer' post links with numbered navigation
 require_once(get_template_directory().'/assets/functions/page-navi.php');
 
+// Programs post type
+require_once(get_template_directory().'/assets/functions/programs-post-type.php');
+
 // Adds site styles to the WordPress editor
 // require_once(get_template_directory().'/assets/functions/editor-styles.php');
 

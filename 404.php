@@ -8,7 +8,7 @@
 
 				<header class="article-header page-header expanded row">
 					<div class="column small-centered">
-						<h1 class="page-title"><?php _e( 'Epic 404 - Article Not Found', 'reneewp' ); ?></h1>
+						<h1 class="page-title"><?php _e( '404 - Article Not Found', 'reneewp' ); ?></h1>
 					</div>
 			  </header> <!-- end article header -->
 
