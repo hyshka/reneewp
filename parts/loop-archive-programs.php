@@ -3,8 +3,7 @@
 		<div class="column">
 			<div class="program-feature-container">
 				<div class="program-feature-image entry-content text-center">
-		  		<img src="https://placem.at/people?w=300&h=300" alt="">
-		  		<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('thumbnail', array( 'class' => '' )); ?></a>
+		  		<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('program-thumb', array( 'class' => '' )); ?></a>
 		  	</div>
 		    <div class="program-feature-content entry-content" itemprop="articleBody">
 		      <h1 class="program-feature-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
