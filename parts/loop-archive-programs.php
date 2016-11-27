@@ -1,4 +1,10 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class('program-feature'); ?> role="article">
+<?php 
+	// if even
+	if($i % 2 == 0): ?>
+	<article id="post-<?php the_ID(); ?>" <?php post_class('program-feature'); ?> role="article">
+<?php else: ?>
+	<article id="post-<?php the_ID(); ?>" <?php post_class('program-feature program-feature--background'); ?> role="article">
+<?php endif ?>
 	<div class="row">
 		<div class="column">
 			<div class="program-feature-container">
