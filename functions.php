@@ -66,7 +66,7 @@ function do_breakthrough_cta() {
 
   $coaching_page = the_post();
 
-  $hero_title = get_field('hero_title', $coaching_page );
+  $hero_title = get_field('hero_title', $coaching_page);
   $hero_subtitle = get_field('hero_subtitle', $coaching_page);
   $hero_paragraph_text = get_field('hero_paragraph_text', $coaching_page);
   $hero_button_link = get_field('hero_button_link', $coaching_page);
