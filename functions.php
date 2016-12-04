@@ -64,7 +64,7 @@ function my_contact_menu_atts( $atts, $item, $args )
 // Add Shortcode
 function do_breakthrough_cta() {
 
-  $coaching_page = 9;
+  $coaching_page = the_post();
 
   $hero_title = get_field('hero_title', $coaching_page );
   $hero_subtitle = get_field('hero_subtitle', $coaching_page);
