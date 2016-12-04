@@ -2,7 +2,7 @@
 			
 <div id="content">
 
-	<?php if (the_field('hero_title')) : ?>
+	<?php if (the_field('hero_title')) { ?>
 		<div id="breakthrough" class="hero expanded row">
 		  <div class="inner-hero clearfix">
 		    <div class="column small-centered">
@@ -12,7 +12,7 @@
 		    </div>
 		  </div>
 		</div>
-	<?php endif; ?>
+	<?php } ?>
 
 	<main id="main" class="" role="main">
 	
