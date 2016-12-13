@@ -10,9 +10,9 @@
 			  	<?php the_field('hero_paragraph_text'); ?>
 				  <?php 
 				  	if (get_field('hero_button_external_link')) {
-				  		$button_link = the_field('hero_button_external_link');
+				  		$button_link = get_field('hero_button_external_link');
 					  } else {
-				  		$button_link = the_field('hero_button_link');
+				  		$button_link = get_field('hero_button_link');
 					  }
 					?>
 		      <a href="<?php echo $button_link ?>" class="button"><?php the_field('hero_button_text'); ?></a> <a href="<?php the_field('hero_secondary_button_link'); ?>"><small><?php the_field('hero_secondary_button_text'); ?></small></a>
