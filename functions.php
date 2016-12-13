@@ -70,10 +70,17 @@ function do_breakthrough_cta() {
   $hero_subtitle = get_field('hero_subtitle', $coaching_page);
   $hero_paragraph_text = get_field('hero_paragraph_text', $coaching_page);
   $hero_button_link = get_field('hero_button_link', $coaching_page);
+  $hero_button_external_link = get_field('hero_button_external_link', $coaching_page);
   $hero_button_text = get_field('hero_button_text', $coaching_page);
 
+  if ($hero_button_external_link) {
+    $button_link = $hero_button_external_link;
+  } else {
+    $button_link = $hero_button_link;
+  }
+
   if ($hero_title) {
-    return '<div class="row expanded callout hero"><div class="column"><h1>'.$hero_title.'<br><span>'.$hero_subtitle.'</span></h1>'.$hero_paragraph_text.'<a href="'.$hero_button_link.'" class="button">'.$hero_button_text.'</a></div></div>';
+    return '<div class="row expanded callout hero"><div class="column"><h1>'.$hero_title.'<br><span>'.$hero_subtitle.'</span></h1>'.$hero_paragraph_text.'<a href="'.$button_link.'" class="button">'.$hero_button_text.'</a></div></div>';
   }
   return false;
 }
